@@ -26,3 +26,6 @@ Route::get('/contact', function () {
     return view('contact');    
 })->name('contact');
 
+Route::get('/other', function () {
+    return "other";
+});
