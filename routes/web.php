@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+
 use App\Models\Post;  
 
 /*
@@ -28,20 +29,18 @@ Route::get('/skills', function () {
 
 Route::get('/contact', function () {
     return view('contact');    
-})->name('contact');
+})->name('contact'); 
 
 Route::get('/other', function () {
     return "other";
 });
-/*Route::get('post/create', function(){
+Route::get('post/add', function(){
     DB::table('post')->insert([
         'title' => 'My title',
-        'body' => 'This is my text'
+        'body' => 'My body'
     ]);
 });
 Route::get('post', function(){
     $post = Post::find(1);
+    return $post->title;
 });
-
-
-*/
