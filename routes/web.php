@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
-use App\Models\Client;  
+use App\Models\Post;  
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +33,15 @@ Route::get('/contact', function () {
 Route::get('/other', function () {
     return "other";
 });
+/*Route::get('post/create', function(){
+    DB::table('post')->insert([
+        'title' => 'My title',
+        'body' => 'This is my text'
+    ]);
+});
+Route::get('post', function(){
+    $post = Post::find(1);
+});
+
+
+*/
