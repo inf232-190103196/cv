@@ -35,16 +35,17 @@ Route::get('/contact', function () {
 Route::get('/other', function () {
     return "other";
 });
+
 Route::get('post/add', function(){
     DB::table('post')->insert([
         'title' => 'My title',
         'body' => 'My body'
     ]);
 });
-Route::get('post', function (){
+/*Route::get('/post', function (){
 	$post = Post::find(1);
 	return $post;
-});
+});*/
 
 Route::get('blog/index', [BlogController::class, 'index']);
 
